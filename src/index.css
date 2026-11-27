@@ -1,0 +1,48 @@
+@import "tailwindcss";
+/* Basecoat: componentes do shadcn/ui em HTML + Tailwind puro (sem React).
+   Usamos as classes .btn, .card, .badge, .field, .avatar etc. */
+@import "basecoat-css";
+
+/* Identidade visual do TrilhaBR: fonte, cores e animação de entrada.
+   Todo o resto é feito com as classes do Tailwind direto no HTML. */
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-floresta-50: #eef6ee;
+  --color-floresta-600: #2e7d32;
+  --color-floresta-700: #256628;
+  --color-floresta-800: #1b5e20;
+  --color-floresta-900: #123f16;
+
+  --color-brasa-300: #ffab91;
+  --color-brasa-600: #f4511e;
+  --color-brasa-700: #d84315;
+
+  --color-terra-700: #6d4c41;
+  --color-areia: #f6f5f0;
+
+  --animate-surgir: surgir 0.7s ease-out both;
+  @keyframes surgir {
+    from { opacity: 0; transform: translateY(1rem); }
+  }
+}
+
+/* Tokens do shadcn/ui com as cores do TrilhaBR (Basecoat lê essas variáveis) */
+:root {
+  --radius: 0.875rem;
+  --background: var(--color-areia);
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --primary: var(--color-floresta-700);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-floresta-50);
+  --secondary-foreground: var(--color-floresta-800);
+  --muted: #eeece5;
+  --muted-foreground: #66615a;
+  --accent: var(--color-floresta-50);
+  --accent-foreground: var(--color-floresta-800);
+  --border: #e5e2d9;
+  --input: #d9d5ca;
+  --ring: var(--color-floresta-600);
+}
